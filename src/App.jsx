@@ -10,20 +10,22 @@ function App() {
       <img className="stars" src={bgStars} alt="stars-bg" />
       <img className="hills" src={hills} alt="hills-bg" />
 
-      <header>
-        <Header />
-      </header>
+      <main>
+        <header>
+          <Header />
+        </header>
 
-      <div className="main-components">
-        <Card value={8} attr={"Days"} />
-        <Card value={23} attr={"Hours"} />
-        <Card value={55} attr={"Minutes"} />
-        <Card value={41} attr={"Seconds"} />
-      </div>
+        <div className="main-components">
+          <Card value={8} attr={"Days"} />
+          <Card value={23} attr={"Hours"} />
+          <Card value={55} attr={"Minutes"} />
+          <Card value={41} attr={"Seconds"} />
+        </div>
 
-      <footer>
-        <Footer />
-      </footer>
+        <footer>
+          <Footer />
+        </footer>
+      </main>
     </>
   );
 }
