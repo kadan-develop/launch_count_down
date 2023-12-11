@@ -36,27 +36,106 @@ header {
 
 .main-components {
   display: flex;
-  margin-top: 80px;
+  margin-top: 90px;
   justify-content: center;
   align-items: center;
   align-content: center;
 }
 
 .card {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
   width: 190px;
-  height: 180px;
+  height: 90px;
   background-color: hsl(236, 21%, 26%);
   border-radius: 10px;
+  box-shadow: hsl(234, 17%, 12%) 0px 12px 0px 0px;
   margin: 20px;
   text-align: center;
   font-size: 50px;
   color: hsl(345, 95%, 68%);
 }
 
+/* TOP CARD */
+.card.top {
+  box-shadow: none;
+  border-radius: 10px 10px 0 0;
+}
+
+.top h1 {
+  position: absolute;
+  top: -42px;
+}
+
+.card.top .c1 {
+  bottom: -7px;
+}
+
+.card.top .c2 {
+  bottom: -7px;
+}
+
+/* BOTTOM CARD */
+.bottom {
+  top: -19px;
+}
+
+.card.bottom {
+  border-radius: 0 0 10px 10px;
+}
+
+.bottom h1 {
+  position: absolute;
+  bottom: -42px;
+}
+
+.card.bottom .c1 {
+  top: -7px;
+}
+
+.card.bottom .c2 {
+  top: -7px;
+}
+
+/*  */
+.c1 {
+  left: -8px;
+}
+
+.c2 {
+  right: -8px;
+}
+
+.circle {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-color: hsl(234, 17%, 12%);
+  border-radius: 20px;
+  z-index: 10;
+}
+
+.cards p {
+  font-family: inherit;
+  font-size: 18px;
+  color: hsl(237, 18%, 59%);
+  text-align: center;
+  letter-spacing: 8px;
+  margin-top: 8px;
+}
+
 footer {
-  /* position: absolute; */
-  bottom: 100px;
+  position: absolute;
+  bottom: -350px;
+}
+
+.links {
+  margin: 20px;
+}
+
+.links img {
+  width: 30px;
 }

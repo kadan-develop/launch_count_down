@@ -5,16 +5,16 @@ import pintIcon from "./assets/icon-pinterest.svg";
 function Footer() {
   return (
     <>
-      <a href="https://facebook.com">
+      <a className="links" href="https://facebook.com">
         <img src={faIcon} alt="facebook-icon" />
       </a>
 
-      <a href="https://instagram.com">
-        <img src={instaIcon} alt="instagram-icon" />
+      <a className="links" href="https://instagram.com">
+        <img src={pintIcon} alt="pinterest-icon" />
       </a>
 
-      <a href="https://pinterest.com">
-        <img src={pintIcon} alt="pinterest-icon" />
+      <a className="links" href="https://pinterest.com">
+        <img src={instaIcon} alt="instagram-icon" />
       </a>
     </>
   );
