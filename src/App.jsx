@@ -3,8 +3,38 @@ import Card from "./Card";
 import Footer from "./Footer";
 import bgStars from "./assets/bg-stars.svg";
 import hills from "./assets/pattern-hills.svg";
+import { useState } from "react";
 
 function App() {
+  const [days, setDays] = useState(0);
+  const [hours, setHours] = useState(0);
+  const [minutes, setMinutes] = useState(0);
+  const [seconds, setSeconds] = useState(0);
+
+  // Set the date we're counting down to
+  const countDownDate = new Date("December 24, 2023 00:00:00").getTime();
+
+  // Update the count down every 1 second
+  const x = setInterval(function () {
+    // Get today's date and time
+    let now = new Date().getTime();
+
+    // Find the distance between now and the count down date
+    let distance = countDownDate - now;
+
+    // Time calculations for days, hours, minutes and seconds
+    setDays(Math.floor(distance / (1000 * 60 * 60 * 24)));
+    setHours(Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)));
+    setMinutes(Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)));
+    setSeconds(Math.floor((distance % (1000 * 60)) / 1000));
+
+    // If the count down is finished, write some text
+    if (distance < 0) {
+      clearInterval(x);
+      console.log("expired");
+    }
+  }, 1000);
+
   return (
     <>
       <img className="stars" src={bgStars} alt="stars-bg" />
@@ -16,10 +46,10 @@ function App() {
         </header>
 
         <div className="main-components">
-          <Card value={8} attr={"Days"} />
-          <Card value={23} attr={"Hours"} />
-          <Card value={55} attr={"Minutes"} />
-          <Card value={41} attr={"Seconds"} />
+          <Card value={days} attr={"Days"} />
+          <Card value={hours} attr={"Hours"} />
+          <Card value={minutes} attr={"Minutes"} />
+          <Card value={seconds} attr={"Seconds"} />
         </div>
 
         <footer>
