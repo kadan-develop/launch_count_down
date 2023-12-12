@@ -13,9 +13,8 @@ function App() {
 
   // Set the date we're counting down to
   const countDownDate = new Date("December 24, 2023 00:00:00").getTime();
-
   // Update the count down every 1 second
-  const x = setInterval(function () {
+  const setCountDown = setInterval(function () {
     // Get today's date and time
     let now = new Date().getTime();
 
@@ -28,9 +27,9 @@ function App() {
     setMinutes(Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)));
     setSeconds(Math.floor((distance % (1000 * 60)) / 1000));
 
-    // If the count down is finished, write some text
+    // If the count down is finished, write some tesetCountDownt
     if (distance < 0) {
-      clearInterval(x);
+      clearInterval(setCountDown);
       console.log("expired");
     }
   }, 1000);

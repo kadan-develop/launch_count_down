@@ -2,7 +2,7 @@
   font-family: "Red Hat Text", sans-serif;
   background-color: hsl(235, 16%, 14%);
   overflow: hidden;
-  max-width: 1280px;
+  /* max-width: 1440px; */
   font-size: 14px;
 }
 
@@ -11,13 +11,14 @@ body {
 }
 
 main {
+  width: 100%;
+  top: 10%;
   position: absolute;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  top: 10%;
-  left: 38%;
+  margin: 0 auto;
 }
 
 header {
@@ -129,13 +130,22 @@ header {
 
 footer {
   position: absolute;
-  bottom: -350px;
+  bottom: -80%;
 }
 
 .links {
   margin: 20px;
+  text-align: center;
 }
 
-.links img {
-  width: 30px;
+svg {
+  padding: 5px;
+  transform: scale(1.2);
+}
+
+svg:hover path {
+  fill: hsl(345, 95%, 68%);
+}
+
+@media screen {
 }
