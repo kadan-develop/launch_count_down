@@ -36,9 +36,6 @@ function App() {
 
   return (
     <>
-      <img className="stars" src={bgStars} alt="stars-bg" />
-      <img className="hills" src={hills} alt="hills-bg" />
-
       <main>
         <header>
           <Header />
@@ -54,6 +51,7 @@ function App() {
         <footer>
           <Footer />
         </footer>
+        <img className="hills" src={hills} alt="hills-bg" />
       </main>
     </>
   );
