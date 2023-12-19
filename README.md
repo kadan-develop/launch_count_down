@@ -11,6 +11,10 @@
 
 ## Overview
 
+## Screentshot
+
+![](./src/assets/screenshot.png)
+
 ### The challenge
 
 Users should be able to:

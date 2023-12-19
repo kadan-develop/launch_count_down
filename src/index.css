@@ -20,12 +20,12 @@ main {
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin: 100px auto;
+  margin: 140px auto;
 }
 
 header {
   color: #fff;
-  font-size: 14px;
+  font-size: 11px;
   letter-spacing: 8px;
   z-index: 10;
 }
@@ -42,96 +42,62 @@ header {
 
 .main-components {
   display: grid;
-  grid-template-columns: 220px 220px 220px 220px;
+  grid-template-columns: 185px 185px 185px 185px;
   height: 100vh;
   margin-top: 90px;
+  z-index: 100;
 }
 
 .card {
   position: relative;
   display: flex;
   justify-content: center;
+  align-items: center;
   overflow: hidden;
-  width: 190px;
-  height: 90px;
+  width: 155px;
+  height: 145px;
   background-color: hsl(236, 21%, 26%);
-  box-shadow: hsl(234, 17%, 12%) 0px 12px 0px 0px;
-  margin-top: 20px;
-  font-size: 50px;
+  box-shadow: hsl(234, 17%, 12%) 0px 10px 0px 0px;
+  border-radius: 10px;
+}
+
+.card h1 {
+  font-size: 80px;
   color: hsl(345, 95%, 68%);
-}
-
-/* TOP CARD */
-.card.top {
-  box-shadow: none;
-  border-radius: 10px 10px 0 0;
-}
-
-.top h1 {
-  position: absolute;
-  top: -42px;
-}
-
-.card.top .c1 {
-  bottom: -7px;
-}
-
-.card.top .c2 {
-  bottom: -7px;
-}
-
-/* BOTTOM CARD */
-.bottom {
-  top: -19px;
-}
-
-.card.bottom {
-  border-radius: 0 0 10px 10px;
-}
-
-.bottom h1 {
-  position: absolute;
-  bottom: -42px;
-}
-
-.card.bottom .c1 {
-  top: -7px;
-}
-
-.card.bottom .c2 {
-  top: -7px;
 }
 
 /*  */
 .c1 {
-  left: -8px;
+  top: 66px;
+  left: -6px;
 }
 
 .c2 {
-  right: -8px;
+  top: 66px;
+  right: -6px;
 }
 
 .circle {
   position: absolute;
-  width: 15px;
-  height: 15px;
+  width: 12px;
+  height: 12px;
   background-color: hsl(234, 17%, 12%);
   border-radius: 20px;
-  z-index: 10;
 }
 
 .cards p {
   font-family: inherit;
-  font-size: 18px;
+  font-size: 14px;
   color: hsl(237, 18%, 59%);
   text-align: center;
-  letter-spacing: 8px;
-  margin-top: 8px;
+  letter-spacing: 5px;
+  margin-top: 22px;
+  margin-left: -16px;
 }
 
 footer {
   position: absolute;
-  bottom: 80px;
+  bottom: 70px;
   z-index: 10;
 }
 
@@ -141,8 +107,8 @@ footer {
 }
 
 svg {
-  padding: 5px;
-  transform: scale(1.2);
+  padding: 2px;
+  transform: scale(1);
 }
 
 svg:hover path {
@@ -156,6 +122,9 @@ svg:hover path {
 
   .hills {
     bottom: 0;
+    right: 0;
+    width: 220vw;
+    height: 25vh;
   }
 
   .title {
@@ -163,8 +132,10 @@ svg:hover path {
   }
 
   .main-components {
+    display: grid;
     grid-template-columns: 90px 90px 90px 90px;
     margin-top: 20px;
+    margin-left: 20px;
   }
 
   .card {
@@ -175,10 +146,10 @@ svg:hover path {
   }
 
   .cards p {
-    font-size: 10px;
-    text-align: center;
-    letter-spacing: 5px;
-    margin-top: 0;
+    font-size: 8px;
+    letter-spacing: 2px;
+    margin-top: -5px;
+    margin-right: 18px;
   }
 
   .card.top {
@@ -197,5 +168,27 @@ svg:hover path {
   .bottom h1 {
     position: absolute;
     bottom: -18px;
+  }
+
+  .circle {
+    width: 10px;
+    height: 10px;
+  }
+
+  .c1 {
+    left: -6px;
+  }
+
+  .c2 {
+    right: -6px;
+  }
+
+  svg {
+    padding: 2px;
+    transform: scale(1);
+  }
+
+  footer {
+    bottom: 40px;
   }
 }
