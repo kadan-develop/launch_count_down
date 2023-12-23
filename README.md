@@ -9,7 +9,7 @@
 
 ## Overview
 
-## Screentshot
+## Screenshot
 
 ![](./src/assets/screenshot.png)
 
