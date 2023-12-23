@@ -15,17 +15,14 @@ body::before {
 }
 
 main {
-  display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   text-align: center;
-  margin: 140px auto;
 }
 
 header {
-  color: #fff;
+  margin-top: 105px;
   font-size: 11px;
+  color: #fff;
   letter-spacing: 8px;
   z-index: 10;
 }
@@ -34,25 +31,24 @@ header {
   width: 100vw;
 }
 
-.hills {
-  position: absolute;
-  width: 100vw;
-  bottom: 0;
-}
-
 .main-components {
   display: grid;
+  justify-content: center;
+  align-items: center;
   grid-template-columns: 185px 185px 185px 185px;
-  height: 100vh;
   margin-top: 90px;
-  z-index: 100;
+}
+
+.cards p {
+  font-size: 15px;
+  margin-top: 22px;
+  margin-left: -16px;
+  color: hsl(237, 18%, 59%);
+  letter-spacing: 5px;
 }
 
 .card {
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   overflow: hidden;
   width: 155px;
   height: 145px;
@@ -66,7 +62,13 @@ header {
   color: hsl(345, 95%, 68%);
 }
 
-/*  */
+.circle {
+  width: 12px;
+  height: 12px;
+  background-color: hsl(234, 17%, 12%);
+  border-radius: 20px;
+}
+
 .c1 {
   top: 66px;
   left: -6px;
@@ -77,118 +79,105 @@ header {
   right: -6px;
 }
 
-.circle {
-  position: absolute;
-  width: 12px;
-  height: 12px;
-  background-color: hsl(234, 17%, 12%);
-  border-radius: 20px;
-}
-
-.cards p {
-  font-family: inherit;
-  font-size: 14px;
-  color: hsl(237, 18%, 59%);
-  text-align: center;
-  letter-spacing: 5px;
-  margin-top: 22px;
-  margin-left: -16px;
-}
+/* FOOTER */
 
 footer {
-  position: absolute;
-  bottom: 70px;
+  bottom: 60px;
   z-index: 10;
 }
 
 .links {
   margin: 15px;
-  text-align: center;
 }
 
 svg {
   padding: 2px;
   transform: scale(1);
+  cursor: pointer;
+  z-index: 10;
 }
 
 svg:hover path {
   fill: hsl(345, 95%, 68%);
 }
 
+.hills {
+  position: absolute;
+  width: 100vw;
+  bottom: 0;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.position-absolute {
+  position: absolute;
+}
+
 @media only screen and (max-width: 375px) {
   main {
-    margin-top: 130px;
+    margin-top: 65px;
   }
 
   .hills {
-    bottom: 0;
-    right: 0;
     width: 220vw;
     height: 25vh;
+    right: -10px;
   }
 
   .title {
     font-size: 18px;
   }
+  header {
+    margin-top: 70px;
+  }
 
   .main-components {
-    display: grid;
-    grid-template-columns: 90px 90px 90px 90px;
-    margin-top: 20px;
+    grid-template-columns: 85px 85px 85px 85px;
+    margin-top: 40px;
     margin-left: 20px;
   }
 
   .card {
     width: 70px;
-    height: 30px;
+    height: 65px;
     font-size: 18px;
     box-shadow: hsl(234, 17%, 12%) 0px 5px 0px 0px;
+    border-radius: 5px;
+  }
+
+  .card h1 {
+    font-size: 35px;
   }
 
   .cards p {
     font-size: 8px;
     letter-spacing: 2px;
-    margin-top: -5px;
-    margin-right: 18px;
-  }
-
-  .card.top {
-    border-radius: 5px 5px 0 0;
-  }
-
-  .top h1 {
-    position: absolute;
-    top: -18px;
-  }
-
-  .card.bottom {
-    border-radius: 0 0 5px 5px;
-  }
-
-  .bottom h1 {
-    position: absolute;
-    bottom: -18px;
+    margin-top: 10px;
   }
 
   .circle {
-    width: 10px;
-    height: 10px;
+    top: 30px;
+    width: 8px;
+    height: 8px;
   }
 
   .c1 {
-    left: -6px;
+    left: -5px;
   }
 
   .c2 {
-    right: -6px;
+    right: -5px;
   }
 
   svg {
     padding: 2px;
     transform: scale(1);
   }
-
   footer {
-    bottom: 40px;
+    bottom: 35px;
   }
 }
