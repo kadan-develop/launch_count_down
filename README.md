@@ -22,7 +22,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [Add solution URL here](https://www.frontendmentor.io/solutions/launch-countdown-timer-n6BPm_b9Bg)
 - Live Site URL: [Add live site URL here](https://comfy-dusk-6980e9.netlify.app/)
 
 ## My process
