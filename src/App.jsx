@@ -11,7 +11,7 @@ function App() {
   const [seconds, setSeconds] = useState(0);
 
   // Set the date we're counting down to
-  const countDownDate = new Date("Januar 5, 2024 00:00:00").getTime();
+  const countDownDate = new Date("July 6, 2024 22:48:00").getTime();
 
   // Update the count down every 1 second
   const setCountDown = setInterval(function () {
