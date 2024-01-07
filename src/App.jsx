@@ -1,7 +1,6 @@
 import Header from "./components/Header";
-import Card from "./Card";
-import Footer from "./Footer";
-import bgStars from "./assets/bg-stars.svg";
+import Card from "./components/Card";
+import Footer from "./components/Footer";
 import hills from "./assets/pattern-hills.svg";
 import { useState } from "react";
 
@@ -12,7 +11,8 @@ function App() {
   const [seconds, setSeconds] = useState(0);
 
   // Set the date we're counting down to
-  const countDownDate = new Date("December 24, 2023 00:00:00").getTime();
+  const countDownDate = new Date("July 6, 2024 22:48:00").getTime();
+
   // Update the count down every 1 second
   const setCountDown = setInterval(function () {
     // Get today's date and time
@@ -27,19 +27,14 @@ function App() {
     setMinutes(Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)));
     setSeconds(Math.floor((distance % (1000 * 60)) / 1000));
 
-    // If the count down is finished, write some tesetCountDownt
     if (distance < 0) {
       clearInterval(setCountDown);
-      console.log("expired");
     }
   }, 1000);
 
   return (
     <>
-      <img className="stars" src={bgStars} alt="stars-bg" />
-      <img className="hills" src={hills} alt="hills-bg" />
-
-      <main>
+      <main className="flex">
         <header>
           <Header />
         </header>
@@ -51,9 +46,10 @@ function App() {
           <Card value={seconds} attr={"Seconds"} />
         </div>
 
-        <footer>
+        <footer className="position-absolute">
           <Footer />
         </footer>
+        <img className="hills" src={hills} alt="hills-bg" />
       </main>
     </>
   );

@@ -1,7 +1,7 @@
 function Footer() {
   return (
     <>
-      <a className="links" href="https://facebook.com">
+      <a className="links" aria-label="Facebook" target="_blank"  href="https://facebook.com">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
           <path
             fill="#8385A9"
@@ -10,7 +10,7 @@ function Footer() {
         </svg>
       </a>
 
-      <a className="links" href="https://pinterest.com">
+      <a className="links" aria-label="Pinterest" target="_blank" href="https://pinterest.com">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
           <path
             fill="#8385A9"
@@ -19,7 +19,7 @@ function Footer() {
         </svg>
       </a>
 
-      <a className="links" href="https://instagram.com">
+      <a className="links" aria-label="Instgram" target="_blank" href="https://instagram.com">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
           <path
             fill="#8385A9"
