@@ -117,15 +117,16 @@ svg:hover path {
   position: absolute;
 }
 
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 500px) {
   main {
     margin-top: 65px;
   }
 
   .hills {
-    width: 220vw;
-    height: 25vh;
+    width: 200vw;
+    height: 18%;
     right: -10px;
+    bottom: -5px;
   }
 
   .title {
@@ -178,6 +179,6 @@ svg:hover path {
     transform: scale(1);
   }
   footer {
-    bottom: 35px;
+    bottom: 15px;
   }
 }
